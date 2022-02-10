@@ -135,7 +135,8 @@
 	Если ЗначениеЗаполнено(ИдентификаторСессии) Тогда
 		ConnectionInfo.Write("ИдентификаторСессии", ИдентификаторСессии);	
 	КонецЕсли;
-	
+	ConnectionInfo.Write("КоличествоПопытокЗагрузки", 10); 
+	ConnectionInfo.Write("ТаймаутПопытокЗагрузки", 1000);	
 	Кэш.Docflow.WriteConnectionInfo(ConnectionInfo);
 КонецФункции
 &НаКлиенте
