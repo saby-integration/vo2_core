@@ -133,7 +133,7 @@
 	
 	ФайлНоменклатурыПоставщика = Новый Файл(ИмяКаталогаНоменклатурыПоставщика + "NomPost.dbf");
 	Если ФайлНоменклатурыПоставщика.Существует() = Ложь Тогда
-		БД.Execute("Create Table NomPost.dbf (NAME char(240), ID char(240), IDNOM char(240), SPRNOM char(240), IDCHAR char(240), SPRCHAR char(240), GTIN char(240), IDUNITPOST char(240),IDUNITORG char(240), RATIO char(240))");
+		СбисЗаполнитьНовыйФайлСопоставления(БД);
 	КонецЕсли;
 	
 	NAME = "";
@@ -156,8 +156,13 @@
     Recordset.CursorLocation = 3;
     Recordset.Open("Select * from NomPost where NomPost.ID ='"+ID+"'",БД,2,3);
 	
-	Если Recordset.Fields.Count = 6 Тогда   // если еще нет поля GTIN в таблице сопоставления
-		сбисДобавитьПолеШтрихкодВСопоставлениеНоменклатуры(ФайлНоменклатурыПоставщика, БД, СтрокаПодключения);
+	Если НЕ Recordset.Fields.Count = 10 Тогда
+		//По числу полей определим, соответствует ли формат БД требуемому.
+		СбисОбновитьФайлБД(ФайлНоменклатурыПоставщика, БД, Recordset.Fields.Count);
+		//Переоткроем файл после обновления
+		Recordset.Close();
+    	Recordset.CursorLocation = 3;
+   		Recordset.Open("Select * from NomPost where NomPost.ID ='"+ID+"'",БД,2,3);
 	КонецЕсли;           
 	
 	Результат = Новый Структура("Номенклатура, Характеристика, ЕдИзмОрг, Коэффициент");
@@ -168,11 +173,11 @@
 			Если ЗначениеЗаполнено(RecordSet.Fields("IDCHAR").value) и ЗначениеЗаполнено(RecordSet.Fields("SPRCHAR").value) Тогда
 				Результат.Характеристика = Справочники[СокрЛП(RecordSet.Fields("SPRCHAR").value)].ПолучитьСсылку(Новый УникальныйИдентификатор(СокрЛП(RecordSet.Fields("IDCHAR").value)));	
 			КонецЕсли;
-			Если ЗначениеЗаполнено(RecordSet.Fields("IDUNITPOST").value) Тогда
-				Результат.ЕдИзм = RecordSet.Fields("IDUNITPOST").value;	
+			Если ЗначениеЗаполнено(RecordSet.Fields("IDUNPOST").value) Тогда
+				Результат.ЕдИзм = RecordSet.Fields("IDUNPOST").value;	
 			КонецЕсли;
-			Если ЗначениеЗаполнено(RecordSet.Fields("IDUNITORG").value) Тогда
-				Результат.ЕдИзмОрг = Справочники["КлассификаторЕдиницИзмерения"].НайтиПоНаименованию(RecordSet.Fields("IDUNITORG").value);	
+			Если ЗначениеЗаполнено(RecordSet.Fields("IDUNTORG").value) Тогда
+				Результат.ЕдИзмОрг = Справочники["КлассификаторЕдиницИзмерения"].НайтиПоНаименованию(RecordSet.Fields("IDUNTORG").value);	
 			КонецЕсли;
 			Если ЗначениеЗаполнено(RecordSet.Fields("RATIO").value) Тогда
 				Результат.Коэффициент = RecordSet.Fields("RATIO").value;	
@@ -197,11 +202,11 @@
 					Если ЗначениеЗаполнено(RecordSet.Fields("IDCHAR").value) и ЗначениеЗаполнено(RecordSet.Fields("SPRCHAR").value) Тогда
 						Результат.Характеристика = Справочники[СокрЛП(RecordSet.Fields("SPRCHAR").value)].ПолучитьСсылку(Новый УникальныйИдентификатор(СокрЛП(RecordSet.Fields("IDCHAR").value)));	
 					КонецЕсли;
-					Если ЗначениеЗаполнено(RecordSet.Fields("IDUNITPOST").value) Тогда
-						Результат.ЕдИзм = RecordSet.Fields("IDUNITPOST").value;	
+					Если ЗначениеЗаполнено(RecordSet.Fields("IDUNPOST").value) Тогда
+						Результат.ЕдИзм = RecordSet.Fields("IDUNPOST").value;	
 					КонецЕсли;
-					Если ЗначениеЗаполнено(RecordSet.Fields("IDUNITORG").value) Тогда
-						Результат.ЕдИзмОрг = Справочники["КлассификаторЕдиницИзмерения"].НайтиПоНаименованию(RecordSet.Fields("IDUNITORG").value);	
+					Если ЗначениеЗаполнено(RecordSet.Fields("IDUNTORG").value) Тогда
+						Результат.ЕдИзмОрг = Справочники["КлассификаторЕдиницИзмерения"].НайтиПоНаименованию(RecordSet.Fields("IDUNTORG").value);	
 					КонецЕсли;
 					Если ЗначениеЗаполнено(RecordSet.Fields("RATIO").value) Тогда
 						Результат.Коэффициент = RecordSet.Fields("RATIO").value;	
@@ -246,9 +251,9 @@
 	
 	NAME = Лев(СокрЛП(стрНоменклатураПоставщика.Название), 240); 
 	ID = Лев(стрНоменклатураПоставщика.Идентификатор, 240); 
-	IDUNITORG = Лев(Строка(стрНоменклатураПоставщика.ЕдИзмОрг), 240);
+	IDUNTORG = Лев(Строка(стрНоменклатураПоставщика.ЕдИзмОрг), 240);
 	RATIO = Лев(стрНоменклатураПоставщика.Коэффициент, 240);
-	IDUNITPOST = "";
+	IDUNPOST = "";
 	Если Не ЗначениеЗаполнено(ID) Тогда
 		ID = NAME;
 	КонецЕсли;	
@@ -291,13 +296,13 @@
 		КонецЕсли;
 		Если стрНоменклатураПоставщика.Свойство("ЕдИзм") Тогда  
 			Попытка
-				RecordSet.Fields("IDUNITPOST").value = СокрЛП(IDUNITPOST);
+				RecordSet.Fields("IDUNPOST").value = СокрЛП(IDUNPOST);
 			Исключение
 			КонецПопытки;
 		КонецЕсли;
 		Если стрНоменклатураПоставщика.Свойство("ЕдИзмОрг") Тогда  
 			Попытка
-				RecordSet.Fields("IDUNITORG").value = СокрЛП(IDUNITORG);
+				RecordSet.Fields("IDUNTORG").value = СокрЛП(IDUNTORG);
 			Исключение
 			КонецПопытки;
 		КонецЕсли;
@@ -396,16 +401,38 @@
 									,"”","")
 									,"®",""));
 КонецФункции
+
+//NAME		- название номенклатуры поставщика
+//ID		- идентификатор номенклатуры поставщика
+//IDNOM		- идентификатор номенклатуры в 1С (УИД)
+//SPRNOM	- название справочника номенклатуры 1С (Номенклатура)
+//IDCHAR	- идентификатор характеристики номенклатуры в 1С (УИД)
+//SPRCHAR	- название справочника характеристик 1С (ХарактеристикиНоменклатуры)
+//IDUNPOST	- идентификатор единицы измерения в 1С (УИД)
+//IDUNTORG	- название справочника единиц измерения 1С (УпаковкиЕдиницыИзмерения)
+//RATIO		- коэффициет пересчета в эту запись
+//GTIN		- глобальный номер товарной продукции, при наличии.
 &НаСервереБезКонтекста
-Процедура сбисДобавитьПолеШтрихкодВСопоставлениеНоменклатуры(ФайлНомПост, БД, СтрокаПодключения)
-	ПереместитьФайл(ФайлНомПост.ПолноеИмя, СтрЗаменить(ФайлНомПост.ПолноеИмя,"NomPost","NPOld")); 
-	// Заполним новые файлы   
-	Попытка     
-		БД.Execute("Create Table NomPost.dbf (NAME char(240), ID char(240), IDNOM char(240), SPRNOM char(240), IDCHAR char(240), SPRCHAR char(240), GTIN char(240), IDUNITORG char(240), RATIO char(240))");
-		БД.Execute("INSERT INTO NomPost(NAME, ID, IDNOM, SPRNOM, IDCHAR, SPRCHAR) SELECT NAME, ID, IDNOM, SPRNOM, IDCHAR, SPRCHAR FROM NPOld");
+Процедура СбисЗаполнитьНовыйФайлСопоставления(БД)
+	БД.Execute("Create Table NomPost.dbf (NAME char(240), ID char(240), IDNOM char(240), SPRNOM char(240), IDCHAR char(240), SPRCHAR char(240), IDUNPOST char(240),IDUNTORG char(240), RATIO char(240), GTIN char(240))");	
+КонецПроцедуры
+
+//Процедура приводит старый файл DBF к "новому формату", с переносом старых данных
+&НаСервереБезКонтекста
+Процедура СбисОбновитьФайлБД(СтарыйФайлНомПост, БД, ЧислоСуществующихЗаписей)
+	ПереместитьФайл(СтарыйФайлНомПост.ПолноеИмя, СтрЗаменить(СтарыйФайлНомПост.ПолноеИмя,"NomPost","NPOld")); 
+	Попытка
+		СбисЗаполнитьНовыйФайлСопоставления(БД);
+		Если ЧислоСуществующихЗаписей = 7 Тогда
+			//Переносим вместе с GTIN
+			БД.Execute("INSERT INTO NomPost(NAME, ID, IDNOM, SPRNOM, IDCHAR, SPRCHAR, GTIN) SELECT NAME, ID, IDNOM, SPRNOM, IDCHAR, SPRCHAR, GTIN FROM NPOld");
+		Иначе
+			//Совсем старый, либо неизвестный формат. Переносим то, что есть
+			БД.Execute("INSERT INTO NomPost(NAME, ID, IDNOM, SPRNOM, IDCHAR, SPRCHAR) SELECT NAME, ID, IDNOM, SPRNOM, IDCHAR, SPRCHAR FROM NPOld");
+		КонецЕсли;	
 	Исключение
 		Ошибка = ОписаниеОшибки();      
-		Сообщить("Не удалось добавить поле GTIN в таблицу сопоставления номенклатуры ("+Ошибка+")");
-		ПереместитьФайл(СтрЗаменить(ФайлНомПост.ПолноеИмя,"NomPost","NPOld"), ФайлНомПост.ПолноеИмя);
-	КонецПопытки;
+		Сообщить("Не удалось обновить файл сопоставления ("+ Ошибка +")");
+		ПереместитьФайл(СтрЗаменить(СтарыйФайлНомПост.ПолноеИмя,"NomPost","NPOld"), СтарыйФайлНомПост.ПолноеИмя);
+	КонецПопытки;		
 КонецПроцедуры
