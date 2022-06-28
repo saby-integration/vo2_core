@@ -233,8 +233,8 @@
 	КонецЕсли;
 	Рез = сбисОтправитьИОбработатьКоманду(Кэш,"GetPluginSettings",Параметр, ДопПараметрыЗапроса,Отказ);	
 	Если Не Отказ Тогда
-		Если Рез.Свойство("NEW_SETTINGS") и Рез.NEW_SETTINGS.Свойство("SecureLoading") и Рез.NEW_SETTINGS.SecureLoading.Свойство("fromFolder") и Рез.NEW_SETTINGS.SecureLoading.encrypt = Истина Тогда
-			Кэш.Вставить("КаталогЗашифрованных", Рез.NEW_SETTINGS.SecureLoading.fromFolder);	
+		Если Рез.Свойство("SecureLoading") и Рез.SecureLoading.Свойство("fromFolder") и Рез.SecureLoading.encrypt = Истина Тогда
+			Кэш.Вставить("КаталогЗашифрованных", Рез.SecureLoading.fromFolder);	
 		КонецЕсли;
 	КонецЕсли;
 КонецФункции	
