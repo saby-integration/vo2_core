@@ -2266,6 +2266,9 @@
 			Если	Не	ТипЗнч(checkResult) = Тип("Структура")
 				Или	Не	checkResult.Свойство("Error", message_result) Тогда
 				message_result = checkResult;
+			КонецЕсли; 
+			Если checkResult.code = 411 Тогда
+				ДопПараметры.Вставить("СообщатьПриОшибке", Ложь);
 			КонецЕсли;
 		ИначеЕсли	Не	ТипЗнч(checkResult) = Тип("Структура")
 				Или	Не	checkResult.Свойство("Result", message_result) Тогда
