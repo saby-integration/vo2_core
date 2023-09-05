@@ -1,0 +1,35 @@
+<template>
+    <div class="header">
+        <img
+            src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNC4zLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0i0KHQu9C+0LlfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA4My42IDI4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA4My42IDI4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojMEM5NEZGO30NCgkuc3Qxe2ZpbGw6IzMzMzMzMzt9DQo8L3N0eWxlPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTIwLjEsNC40bC00LjYsMS41YzAsMC0wLjcsMS4zLTEuNywzLjJMMC40LDAuNGw5LjksMTUuN2MtMi44LDUuNi01LjcsMTEuNS01LjcsMTEuNEwxNywxMS4ybC0wLjYtMS45DQoJTDIwLjEsNC40eiIvPg0KPHBhdGggY2xhc3M9InN0MSIgZD0iTTMzLjUsMTcuMmMwLjIsMS4zLDAuOCwyLjMsMS45LDNzMi41LDEuMSw0LjEsMS4xYzMsMCw1LjEtMS4zLDUuMS0zLjNjMC0xLjgtMS4yLTIuOS01LjEtMy41DQoJYy0zLTAuNS0zLjctMC45LTMuNy0xLjdjMC0xLDEuMy0xLjgsMy0xLjhjMi4xLDAsMy42LDAuOSw0LDIuNWwxLjYtMC4zYy0wLjQtMi4xLTIuNy0zLjYtNS42LTMuNmMtMi43LDAtNC43LDEuNC00LjcsMy4zDQoJYzAsMS44LDEuMiwyLjYsNS4xLDMuMmMzLjEsMC41LDMuOCwxLDMuOCwyYzAsMS4xLTEuMywxLjgtMy4zLDEuOGMtMi41LDAtNC4xLTEtNC40LTNMMzMuNSwxNy4yeiBNNDYuMywxOGMwLDIsMS41LDMuMyw0LjEsMy4zDQoJYzEuOCwwLDMuNC0wLjcsNC4xLTEuN2gwVjIxaDEuN3YtNy44YzAtMi4yLTEuOC0zLjYtNC42LTMuNmMtMS40LDAtMi42LDAuNC0zLjUsMWMtMC45LDAuNy0xLjUsMS42LTEuNywyLjhsMS43LDAuNA0KCWMwLjMtMS43LDEuNy0yLjcsMy42LTIuN2MxLjcsMCwyLjgsMC43LDIuOCwxLjhjMCwwLjktMC44LDEuMy0zLjYsMS44QzQ3LjYsMTUuMiw0Ni4zLDE2LjEsNDYuMywxOHogTTU0LjUsMTcuMQ0KCWMwLDEuNC0xLjgsMi43LTMuOCwyLjdjLTEuOCwwLTIuNy0wLjYtMi43LTEuOGMwLTEuMSwwLjktMS42LDMuNS0yLjFjMS44LTAuNCwyLjYtMC43LDMtMS4yaDBWMTcuMXogTTYwLjYsMTkuNg0KCWMwLjksMS4xLDIuNCwxLjcsNC4yLDEuN2MzLjUsMCw2LTIuNCw2LTUuOWMwLTMuMy0yLjUtNS45LTUuOS01LjljLTEuNywwLTMuMywwLjYtNC4yLDEuN2gwVjUuN2gtMS43VjIxaDEuN0w2MC42LDE5LjZMNjAuNiwxOS42eg0KCSBNNjksMTUuNGMwLDIuNy0xLjcsNC40LTQuMyw0LjRjLTIuMywwLTQuMS0xLjYtNC4xLTMuNXYtMS43YzAtMiwxLjgtMy41LDQuMi0zLjVDNjcuMywxMS4xLDY5LDEyLjgsNjksMTUuNHogTTc1LjUsMjUuN2w3LjktMTUuOQ0KCWgtMmwtNCw4LjRoMGwtNC4xLTguNGgtMmw1LjEsMTAuMmwtMi45LDUuNkg3NS41eiIvPg0KPC9zdmc+DQo='
+            class="header__logo"
+            @click="logoClickHandler"
+        />
+    </div>
+</template>
+
+<script>
+import Connector from "../../core/Connector";
+
+export default {
+    name: "AccordionHeader",
+    methods: {
+        logoClickHandler() {
+            Connector.click('addon_logo')
+        }
+    }
+}
+</script>
+
+<style>
+.header {
+    height: 30px;
+    margin-bottom: 6px;
+    pointer-events: none;
+}
+.header__logo {
+    height: 28px;
+    width: 84px;
+    margin-left: 11px;
+}
+</style>
