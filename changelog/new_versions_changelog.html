@@ -1,0 +1,367 @@
+﻿<h4><u>Версия 23.7100</u> (02.12.2023)</h4>
+<ul>
+	<li>Появилась возможность сравнивать документы, сформированные в СБИС и 1С.</li>
+	<li>В конфигурацию 1С Бухгалтерия предприятия 3.0 появилась возможность загружать из СБИС ИУПД как «Корректировку реализации».</li>
+	<li>Появилась возможность настроить вид окна сообщений об отправке документов так, чтобы  список ошибок группировался по документам и была возможность открыть протокол ошибки. Для этого включите настройку «Подробные ошибки ФЛК» на вкладке «Документы».</li>
+	<li>Появилась настройка «Создавать черновик», которая позволяет при открытии документа из раздела «Продажа» или «Покупка» сразу записать его в виде черновика в СБИС, без запуска в документооборот. Настройку можно использовать, только если включена опция «Подробные ошибки ФЛК».</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.7100/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,65 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.7100/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,82 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.6246</u> (28.11.2023)</h4>
+<ul>
+	<li>Реализованы вкладки «Маркировка» и «Прослеживаемость» в окне просмотра документа, которые отражают текущие параметры документов в СБИС и списки товаров обязательных к маркировке и подлежащих прослеживаемости.</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.6246/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,65 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.6246/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,82 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.6239</u> (21.11.2023)</h4>
+<ul>
+	<li>Исправлены ошибки:
+		<ul>
+			<li type="disc">При выгрузке из 1С в СБИС УПД со статусом «1» выгружался КПП головной организации вместо КПП обособленного подразделения, несмотря на то, что в счет-фактуре и реализации в качестве организации выбрано обособленное подразделение;</li>
+			<li type="disc">документ отправлялся не Грузополучателю, а организации-получателю с таким же ИНН, но другим КПП.</li>
+		</ul> 
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.6239/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,65 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.6239/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,82 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.6232</u> (14.11.2023)</h4>
+<ul>
+	<li>Временно отключили подстановку филиала в качестве Отправителя, если у Грузоотправителя указан код филиала и ИНН совпадает с ИНН организации, которая была первоначально указана как отправитель.</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.6232/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,65 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.6232/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,82 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.6225</u> (07.11.2023)</h4>
+<ul>
+	<li>Исправлены ошибки:
+		<ul>
+			<li type="disc">«ВнешняяОбработка.СБИС.Форма.ИнтеграцияКаталог.Форма(165)}: Метод объекта не обнаружен (СформироватьСтруктуруКонтрагентаДляОтправки)» — появлялась при отправке документа при способе обмена каталог.</li>
+			<li type="disc">«Неизвестная ошибка клиента (Метод объекта не обнаружен (Свойство))» —  ошибка появлялась при попытке открыть черновик документа в разделе «Продажа».</li>
+		</ul> 
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.6225/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.6225/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.6220</u> (02.11.2023)</h4>
+<ul>
+	<li>Исправлены ошибки:
+		<ul>
+			<li type="disc">После обновления конфигурации 1С «Бухгалтерия предприятия» редакции 3.0 из карточек контрагентов пропадали дополнительные сведения «СБИС_СпособДоставки», «СБИС_ЗапретРедакций» и другие.</li>
+			<li type="disc">«Не хватает подписей под одним или несколькими документами» и «Ошибка входных данных. Отсутствуют значения обязательных полей: 'Сертификат.ФИО', 'Сертификат.ИНН'» — возникали при подписании электронной подписью исходящих  документов на способе обмена API.</li>
+		</ul> 
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.6220/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.6220/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.6207</u> (20.10.2023)</h4>
+<ul>
+	<li type="disc">Исправлена ошибка, возникающая на конфигурациях, использующих обычные формы:
+		<ul>
+			<li type="disc">при подготовке к загрузке документа в 1С нет возможности выбрать номенклатуру и контрагента из справочника 1С (поля для выбора не кликабельны).</li>
+		</ul>
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.6207/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+</ul>
+
+<h4><u>Версия 23.6206</u> (19.10.2023)</h4>
+<ul>
+	<li type="disc">Для конфигураций УТ10, КА2.4, КА2.5, ERP2.4, ERP2.5:
+		<ul>
+			<li type="disc">реализовали выгрузку параметров «Дата производства», «Срок годности (Годен до)»;</li>
+			<li type="disc">рассчитывается значение срока хранения товара в документах «УПД» и «Уведомление об отгрузке».</li>
+		</ul>
+	</li>
+	<li type="disc">Изменили отображение результата отправки документов — если в 1С загружен документ с ошибкой ФЛК, то в подробной информации пользователь сможет посмотреть полный протокол ошибки.</li>
+	<li type="disc">Появилась возможность добавить в пакет документов УПД 2 (без счетов-фактур).</li>
+	<li type="disc">Документы утверждаются как на online.sbis.ru — теперь можно указывать дату принятия документа, кто принял груз, и другие поля.</li>
+	<li type="disc">Для сети X5 Group появилась возможность при отправке документа из головного офиса указывать код филиала организации.</li>
+	<li type="disc">Исправлены ошибки.</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.6206/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.5132</u> (26.09.2023)</h4>
+<ul>
+	<li>Исправлены ошибки:
+		<ul>
+			<li type="disc">«Нет возможности указать/выбрать контрагента (не открывается справочник)» - появлялась при загрузке документов;</li>
+			<li type="disc">появлялось окно авторизации при переходе в настройки, если изменить способ обмена;
+— при смене каталога отладки новый каталог не сохранялся;</li>
+			<li type="disc">при смене каталога отладки новый каталог не сохранялся;</li>
+			<li type="disc">с активированным генератором ФЭД:
+				<ul>
+					<li type="disc">при формировании ИУПД в документе появлялись позиции с нулевым количеством;</li>
+					<li type="disc">появлялись пустые значения или значения с лишними пробелами в дополнительных параметрах документов;</li>
+					<li type="disc">при формировании УКД могла возникать ошибка ФЛК, из-за которой документ не отправлялся.</li>
+				</ul> 
+			</li>
+		</ul> 
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.5132/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.5132/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.5120</u> (14.09.2023)</h4>
+<ul>
+	<li>Исправлены ошибки:
+		<ul>
+			<li type="disc">«Поле объекта не обнаружено "ВидЦеныПоставщика"» — появлялась при загрузке в 1С документа «Заказ клиента» с пустыми ценами или с установленным параметром «Пересчитывать всегда» настройки «Пересчитывать цены по данным 1С»;</li>
+			<li type="disc">«Отсутствует сертификат ЭЦП для утверждения/отклонения пакета документов» — появлялась при подписании и отложенном подписании документов;</li>
+			<li type="disc">неправильно формировались имена документов в табличной части печатной формы акта сверки взаиморасчетов на конфигурациях УТ 11, КА 2, ERP 2;</li>
+			<li type="disc">при создании акта сверки взаиморасчетов неправильно рассчитывалось конечное сальдо и не рассчитывалось начальное в разрезе договоров, при ответе на входящий акт от контрагента неправильно рассчитывалось расхождение.</li>
+		</ul> 
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.5120/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.5120/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.5106</u> (31.08.2023)</h4>
+<ul>
+	<li>Исправлена ошибка:
+		<ul>
+			<li type="disc">«Ошибка компиляции при вычислении выражения или выполнении фрагмента кода ({1,1)): Обращение к процедуре как к функции (ВыполнитьОбработкуОповещения))» — появлялась после запуска обработки.</li>
+		</ul> 
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.5106/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.5106/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.5104</u> (29.08.2023)</h4>
+<ul>
+	<li>Исправлены ошибки.</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.5104/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.5104/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.4234</u> (17.08.2023)</h4>
+<ul>
+	<li>Исправлены ошибки:
+		<ul>
+			<li type="disc">в документ УПД не попадали данные по маркировке при включенным генератором ФЭД;</li>
+			<li type="disc">«Поле объекта не обнаружено (Сертификат)» — появлялась при утверждении документа;</li>
+			<li type="disc">при хранении настроек в облаке некорректно отображались пользовательские изменения после загрузки из каталога.</li>
+		</ul> 
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.4234/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.4234/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.4225</u> (08.08.2023)</h4>
+<ul>
+	<li>Реализована поддержка работы с МЧД: подписание, отклонение и утверждение документов.</li>
+	<li>Исправлены ошибки:
+		<ul>
+			<li type="disc">Загрузка настроек из каталога в СБИС могла не срабатывать;</li>
+			<li type="disc">При формировании УПД2 с включенным генератором ФЭД не заполнялась строка 5а "Документ об отгрузке".</li>
+		</ul> 
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.4225/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.4225/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.4211</u> (25.07.2023)</h4>
+<ul>
+	<li>Исправлены ошибки:
+		<ul>
+			<li type="disc">при заполнении адреса доставки с использованием генератора ФЭД. В адрес грузополучателя будет копироваться адрес доставки;</li>
+			<li type="disc">«Ошибка при вызове метода контекста (Индекс)» — появлялась при загрузке в облако файлов настроек неизвестного типа из каталога и последующей выгрузки настроек из облака в каталог, а также при сборе технической информации.</li>
+		</ul> 
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.4211/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.4211/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.4200</u> (14.07.2023)</h4>
+<ul>
+	<li>Исправлены ошибки.</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.4200/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.4200/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.4104</u> (11.07.2023)</h4>
+<ul>
+	<li>Исправлены ошибки.</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.4104/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.4104/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.3225</u> (27.06.2023)</h4>
+<ul>
+	<li>Исправлены ошибки:
+		<ul>
+			<li type="disc">«Значение не является значением объектного типа (Кэш)» — возникала при закрытии обработки без сохранения изменений в «Редакторе настроек». Для конфигураций с управляемыми формами;</li>
+			<li type="disc">отображались неверные данные грузоотправителя при формировании УПД, если  в настройках активирован генератор ФЭД и грузоотправителем/поставщиком является ИП;</li>
+			<li type="disc">«Поле объекта не обнаружено (ТовКод)» — при загрузке документов в 1С через внешнюю обработку на конфигурации Штрих-М;</li>
+			<li type="disc">при некоторых доработках настроек не заполнялся адрес грузополучателя в отправляемых документах, если в настройках активирован генератор ФЭД;</li>
+			<li type="disc">не выгружался номер заказа в ИнфПолФХЖ2, если настройки  для Бухгалтерии предприятия не обновлялись более года.</li>
+		</ul> 
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.3225/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.3225/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
+
+<h4><u>Версия 23.3218</u> (20.06.2023)</h4>
+<ul>
+	<li>Исправлены ошибки:
+		<ul>
+			<li type="disc">не заполнялась страна происхождения и ее код, а также неверно заполнялся адрес грузополучателя при формировании УКД с прослеживаемыми товарами, если в настройках активирован генератор ФЭД;</li>
+			<li type="disc">«ВнешняяОбработка.СБИС.Форма.Файл_Шаблон.Форма(2000)}: Индекс находится за границами массива» — появлялась при открытии или отправке УПД из раздела «Продажа»;</li>
+			<li type="disc">«Значение не является значением объектного типа (ОписаниеОповещенияОЗакрытии)"» — возникала при переходе с формы авторизации в настройки;</li>
+			<li type="disc">при сопоставлении документов не выводились суммы для документов СБИС.</li>
+		</ul> 
+	</li>
+</ul>
+
+<p>Скачать:</p>
+<ul>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_82_of/23.3218/Sbis1C.epf" target="_blank"> для обычных форм</a> (EPF, 1,46 МБ);
+	</li>
+	<li>
+		<img src="https://sbis.ru/help/resources/images/icons/download_file.png" /><a href="https://update.sbis.ru/vo2_1c_83_uf/23.3218/Sbis1C_UF.epf" target="_blank"> для управляемых форм</a> (EPF, 1,52 МБ).
+	</li>
+</ul>
