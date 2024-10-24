@@ -1,0 +1,583 @@
+﻿<Structure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Property name="Полученные">
+		<Value xsi:type="Structure">
+			<Property name="АккордеонПолученные11">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонПолученные11</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Полученные</Value>
+					</Property>
+					<Property name="icon">
+						<Value xsi:type="xs:string">Inbox</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">1</Value>
+					</Property>
+					<Property name="boolparent">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонДокОтгрВх11">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонДокОтгрВх11</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Поступления</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонПолученные11</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонКоррВх11">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонКоррВх11</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Корреспонденция</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонПолученные11</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонАктСверВх11">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонАктСверВх11</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Акты сверки</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонПолученные11</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонДоговорВх11">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонДоговорВх11</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Договоры</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонПолученные11</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонЗаказВх11">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонЗаказВх11</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Заказы от покупателей</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонПолученные11</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонСчетВх11">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонСчетВх11</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Счета</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонПолученные11</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонЭТрН11">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонЭТрН11</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Транспортные накладные</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонПолученные11</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="Отправленные">
+		<Value xsi:type="Structure">
+			<Property name="АккордеонОтправленные22">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонОтправленные22</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Отправленные</Value>
+					</Property>
+					<Property name="icon">
+						<Value xsi:type="xs:string">Outbox</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">1</Value>
+					</Property>
+					<Property name="boolparent">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонДокОтгрИсх22">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонДокОтгрИсх22</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Реализации</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонОтправленные22</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонКоррИсх22">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонКоррИсх22</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Корреспонденция</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонОтправленные22</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонАктСверИсх22">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонАктСверИсх22</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Акты сверки</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонОтправленные22</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонДоговорИсх22">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонДоговорИсх22</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Договоры</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонОтправленные22</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонЗаказИсх22">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонЗаказИсх22</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Заказы поставщикам</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонОтправленные22</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонСчетИсх22">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонСчетИсх22</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Счета</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонОтправленные22</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонОтветыКонтрагентов22">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонОтветыКонтрагентов22</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Ответы контрагентов</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонОтправленные22</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонЭТрН22">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонЭТрН22</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Транспортные накладные</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонОтправленные22</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="Продажа">
+		<Value xsi:type="Structure">
+			<Property name="АккордеонПродажа33">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонПродажа33</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Продажа</Value>
+					</Property>
+					<Property name="icon">
+						<Value xsi:type="xs:string">Selling</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">1</Value>
+					</Property>
+					<Property name="boolparent">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">false</Value>
+					</Property>
+				</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="Покупка">
+		<Value xsi:type="Structure">
+			<Property name="АккордеонПокупка44">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонПокупка44</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Покупка</Value>
+					</Property>
+					<Property name="icon">
+						<Value xsi:type="xs:string">Purchase</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">1</Value>
+					</Property>
+					<Property name="boolparent">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">false</Value>
+					</Property>
+				</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="Справочники">
+		<Value xsi:type="Structure">
+			<Property name="АккордеонСправочники66">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонСправочники66</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Справочники</Value>
+					</Property>
+					<Property name="icon">
+						<Value xsi:type="xs:string">Nomenclature</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">1</Value>
+					</Property>
+					<Property name="boolparent">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">false</Value>
+					</Property>
+				</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="Учет">
+		<Value xsi:type="Structure">
+			<Property name="АккордеонУчет77">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонУчет77</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Учет</Value>
+					</Property>
+					<Property name="icon">
+						<Value xsi:type="xs:string">Accounting</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">1</Value>
+					</Property>
+					<Property name="boolparent">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">false</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонПриходныйОрдер77">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонПриходныйОрдер77</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Приходные ордера СБИС</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонУчет77</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонРасходныйОрдер77">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонРасходныйОрдер77</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Расходные ордера СБИС</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонУчет77</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="Задачи">
+		<Value xsi:type="Structure">
+			<Property name="АккордеонЗадачи88">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонЗадачи88</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Задачи</Value>
+					</Property>
+					<Property name="icon">
+						<Value xsi:type="xs:string">Deeds</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">1</Value>
+					</Property>
+					<Property name="boolparent">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">false</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонМои88">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонМои88</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">На мне</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонЗадачи88</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонОтМеня88">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонОтМеня88</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">От меня</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонЗадачи88</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонНаКонтроле88">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонНаКонтроле88</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">На контроле</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонЗадачи88</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="АккордеонНераспределенные88">
+				<Value xsi:type="Structure">
+					<Property name="id">
+						<Value xsi:type="xs:string">АккордеонНераспределенные88</Value>
+					</Property>
+					<Property name="title">
+						<Value xsi:type="xs:string">Разобрать</Value>
+					</Property>
+					<Property name="level">
+						<Value xsi:type="xs:decimal">2</Value>
+					</Property>
+					<Property name="parent">
+						<Value xsi:type="xs:string">АккордеонЗадачи88</Value>
+					</Property>
+					<Property name="action">
+						<Value xsi:type="xs:boolean">true</Value>
+					</Property>
+				</Value>
+			</Property>
+		</Value>
+	</Property> 
+</Structure>
