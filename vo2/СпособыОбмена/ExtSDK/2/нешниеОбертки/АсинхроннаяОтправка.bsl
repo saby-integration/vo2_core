@@ -1,0 +1,16 @@
+
+#Область include_core2_vo2_СпособыОбмена_ExtSDK_2_WriteDocumentEx
+#КонецОбласти 
+
+#Область include_core2_vo2_СпособыОбмена_ExtSDK_2_WriteAttachment
+#КонецОбласти 
+
+#Область include_core2_vo2_СпособыОбмена_ExtSDK_2_ExecuteActionEx  
+#КонецОбласти
+
+#Область include_core2_vo2_СпособыОбмена_ExtSDK_2_СобытияОтправки
+#КонецОбласти
+
+#Область include_core2_vo2_СпособыОбмена_ExtSDK_2_АсинхронныеОтветы
+#КонецОбласти
+
