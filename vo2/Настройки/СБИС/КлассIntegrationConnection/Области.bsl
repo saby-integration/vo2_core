@@ -1,0 +1,11 @@
+//Описание и методы псевдокласса для работы с настройками в СБИС
+
+#Область include_core2_vo2_Настройки_СБИС_КлассIntegrationConnection_Конструктор
+#КонецОбласти
+
+#Область include_core2_vo2_Настройки_СБИС_КлассIntegrationConnection_private
+#КонецОбласти
+
+#Область include_core2_vo2_Настройки_СБИС_КлассIntegrationConnection_public
+#КонецОбласти
+

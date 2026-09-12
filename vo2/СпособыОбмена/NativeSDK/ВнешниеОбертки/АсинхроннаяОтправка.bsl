@@ -1,0 +1,23 @@
+
+#Область include_core2_vo2_СпособыОбмена_NativeSDK_WriteDocumentEx
+#КонецОбласти 
+
+#Область include_core2_vo2_СпособыОбмена_NativeSDK_WriteAttachment
+#КонецОбласти 
+
+#Область include_core2_vo2_СпособыОбмена_NativeSDK_ExecuteActionEx  
+#КонецОбласти
+
+#Область include_core2_vo2_СпособыОбмена_NativeSDK_СобытияОтправки
+#КонецОбласти
+
+#Область include_core2_vo2_СпособыОбмена_NativeSDK_АсинхронныеОтветы
+#КонецОбласти
+
+#Область include_core2_vo2_СпособыОбмена_NativeSDK_АсинхронныеСобытия
+#КонецОбласти
+
+
+#Область include_core2_vo2_СпособыОбмена_NativeSDK_Прочее
+#КонецОбласти
+
