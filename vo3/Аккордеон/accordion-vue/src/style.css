@@ -1,0 +1,19 @@
+body {
+    font-family: 'InterSaby', sans-serif;
+    color: #000;
+    width: 100%;
+}
+
+*,
+*:after,
+*:before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    width: 100%;
+    height: 100vh;
+}
