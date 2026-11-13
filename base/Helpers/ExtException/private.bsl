@@ -1,0 +1,10 @@
+
+#Область include_core2_base_Helpers_ExtException_private_Append
+#КонецОбласти
+
+#Область include_core2_base_Helpers_ExtException_private_misc
+#КонецОбласти
+
+#Область include_core2_base_Helpers_ExtException_private_Static
+#КонецОбласти
+

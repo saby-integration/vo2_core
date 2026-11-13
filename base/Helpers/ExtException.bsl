@@ -1,0 +1,7 @@
+
+#Область include_core2_base_Helpers_ExtException_API_inner
+#КонецОбласти
+
+#Область include_core2_base_Helpers_ExtException_private
+#КонецОбласти
+
