@@ -1,0 +1,4 @@
+
+//DynamicDirective
+Перем ГлавноеОкно;
+
